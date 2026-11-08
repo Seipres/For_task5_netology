@@ -1,14 +1,14 @@
 def palindrome(phrases: list) -> list:
-    result = [] # список палиндромов    
-    for text in phrases: # пройдите циклом по всем фразам
-        phrase = text.replace(' ', '') # удаляем пробелы методом replace, заменяем пробелы на пустоту
+    return [x for x in phrases if x.lower().replace(' ','') == x.lower().replace(' ','')[::-1]] # список палиндромов    
+    #for text in phrases: # пройдите циклом по всем фразам
+    #    phrase = text.replace(' ', '') # удаляем пробелы методом replace, заменяем пробелы на пустоту
         #reverse_phrase = phrase[::-1] 
         #if phrase == reverse_phrase: # сравните фразу с ней же, развернутой наоборот
-        if phrase == phrase[::-1]:
-           result.append(text) # добавьте в список палиндромов отобранные фразы
+    #    if phrase == phrase[::-1]:
+    #       result.append(text) # добавьте в список палиндромов отобранные фразы
     
     # print(result) # раскомментируйте эту строку, если хотите проверить  результат вашего кода
-    return result
+    #return result
 
 # список фраз, которые нужно проверить на палиндром
 # вы можете добавлять в список свои фразы
